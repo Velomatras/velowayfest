@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en-US">
+{{count}}
+{{logosite}}
+[!getLoginName!]
+
+<head>
+
+
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(86688581, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/86688581" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+
+
+<base href="[(site_url)]"/>
+<meta charset="UTF-8" />
+<title>[(site_name)] | [*pagetitle*]</title>
+
+<link href="assets/templates/veloway/css/style7.css" rel="stylesheet" type="text/css" />
+ <!-- [if IE] {{css_style}} -->
+<!-- <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> -->
+<!--[endif] -->
+<!--[if IE 6] 
+<script src="js/belatedPNG.js"></script>
+<script>
+	DD_belatedPNG.fix('*');
+</script>
+[endif]-->
+<script src="assets/templates/veloway/js/jquery-1.4.min.js" type="text/javascript"></script>
+<script src="assets/templates/veloway/js/loopedslider.js" type="text/javascript"></script>
+<!-- <script type="text/javascript">
+  $('#sitenav').click(function(event) {
+  $('#sitenav').removeClass("activemenuclick");
+  $(this).addClass("activemenuclick");
+});
+</script> -->
+<script type="text/javascript">
+	$(function(){
+		$('#slider').loopedSlider({
+			autoStart: 6000,
+			restart: 5000
+		});
+	});
+</script>
+</head>
+<body>
+{{social}}
+<section id="page">
+
+<div id="bodywrap">
+
+<section id="top">
+
+<nav>
+<h1 id="sitename"><a href="#">Велопутешествия как образ жизни</a></h1>
+<article class="sitenav">
+<div id="sitenav">
+
+{{Menu}}
+<!--
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+var url=document.location.href;
+$.each($("#sitenav a"),function(){
+if(this.href==url){$(this).addClass('current');};
+});
+})(jQuery);
+
+ </script> -->
+ 
+</div>
+
+</article>
+
+
+</nav>
+{{slader}}
+<nav>
+<article class="sitenav">
+<div id="sitenav2">
+{{menu2}}
+</div>
+</article>
+</nav>
+</section>
+
+
+<div id="contents">
+<div id="topcolumns">
+</div>
+
+<section id="normalpage">
+<section id="normalpage2">
+
+
+<section id="left2">
+<div style="margin: 0px 0px 0px 25px">
+<h2>[*longtitle*]</h2>
+<article>
+[*#content*]
+</article>
+</div>
+
+
+</section>
+<div id="topcolumns">
+<section id="left3">
+<article class="postpreview"></article> 
+<article class="postpreview">
+{{Спонсоры}}
+</article>
+</section> 
+</div>
+
+<section id="sidebar">
+<article class="testimonials2">
+
+
+
+
+<blockquote>
+
+<p>
+	[!FormLister?
+&model=`Pathologic\EvolutionCMS\MODxAPI\modUsers`
+&modelPath=`core/vendor/pathologic/modxapi/src/modUsers.php`
+&formid=`login`
+&controller=`Login`
+&loginField=`email`
+&passwordField=`password`
+&checkActivation=`1`
+&saveObject=`loginAllUser`
+&rules=`{
+  "email":{
+            "required":"Обязательно введите email"
+            }
+    ,
+    "password":{
+            "required":"Обязательно введите пароль",
+            "minLength":{
+                    "params":6,
+                    "message":"В пароле должно быть больше 6 символов"
+            }
+    }
+}`
+&prepare=`getLoginName`
+&formTpl= `@CODE:
+<div class="register">
+        <form method="post">
+                <input type="hidden" name="formid" value="login">
+                <div class="form-group[+email.errorClass+][+email.requiredClass+]">
+                        <label for="email"><i class="icon-gmail"></i></label>
+                                <input type="text" class="form-control" id="email" placeholder="Email" name="email" value="[+email.value+]">
+                                [+email.error+]
+                </div>
+                <div class="form-group[+password.errorClass+][+password.requiredClass+]">
+                        <label for="password"><i class="icon-cog"></i></label>
+                        <input type="password" class="form-control" id="password" placeholder="Пароль" name="password" value="">
+                        [+password.error+]
+                </div>
+                [+form.messages+]
+                <div class="form-group">
+                        <button type="submit" class="btn btn-primary"><i class="icon-user"></i> Войти</button>
+                </div>
+			<div><a href="[~5~]">забыли пароль</a></div>
+			
+	</div>
+        </form>
+	
+</div>
+`
+&messagesOuterTpl=`@CODE:<div class="alert alert-danger" role="alert">[+messages+]</div>
+`
+&successTpl=`@CODE:
+<div>Поздравляем успешной авторизацией, [+fullname.value+]!<br>
+{{userPanel}}</div>
+`
+&skipTpl=`@CODE:
+	<div>{{userPanel}}</div>`
+&errorTpl=`@CODE:<div class="alert alert-danger">[+message+]</div>`
+&requiredClass=` has-error`
+&errorClass=` has-error`
+&requiredClass=` has-error`
+
+!]
+</p>
+</blockquote>
+
+</article>
+</section>
+
+<div class="clear"></div>
+</section>
+</section>
+</div>
+
+</div>
+<footer id="pagefooter">
+<div id="credits">
+<p>
+{{history_site}}
+
+</p>
+</div>
+</footer>
+
+</section>
+</body>
+</html>

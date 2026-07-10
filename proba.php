@@ -1,0 +1,1 @@
+<img src="{{$row['photo1'] ?? '/assets/images/noimage.png' }}"/>

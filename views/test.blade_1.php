@@ -1,0 +1,1 @@
+<img src="{{$modx->runSnippet('phpthumb', array('input => $row['photo1']', options => 'q=95, w=200')) ?? '/assets/images/noimage.png' }}"/>

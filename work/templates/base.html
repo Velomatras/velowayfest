@@ -1,0 +1,192 @@
+[!getLoginName!]
+[!getFotoUser!]
+<!doctype html>
+<html lang="en-US">
+<head>
+
+{{logosite}}
+	<base href="[(site_url)]"/>
+	<meta charset="UTF-8" />
+<title>[(site_name)] | [*pagetitle*]</title>
+	<link href="/assets/templates/veloway/css/style_white.css" rel="stylesheet" type="text/css" />
+	<!--[if IE]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<!--[if IE 6]>
+	<script src="js/belatedPNG.js"></script>
+	<script>
+		DD_belatedPNG.fix('*');
+	</script>
+	<![endif]-->
+	<script src="assets/templates/veloway/js/jquery-1.4.min.js" type="text/javascript"></script>
+	<script src="assets/templates/veloway/js/loopedslider.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('#slider').loopedSlider({
+				autoStart: 6000,
+				restart: 5000
+			});
+		});
+	</script>
+	
+
+
+</head>
+<body>
+<section id="page">
+	<div id="bodywrap">
+		<section id="top">
+
+			<nav>
+<h1 id="sitename"><a href="#">Велопутешествия как образ жизни</a></h1>
+<article class="sitenav">
+	{{social}}
+
+
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+var url=document.location.href;
+$.each($("#sitenav a"),function(){
+if(this.href==url){$(this).addClass('current');};
+});
+})(jQuery);
+
+ </script>
+{{slader}}
+</article>
+
+</nav>
+
+
+			
+			
+		</section>
+		{{Menu2}}
+		<section id="contentwrap">
+			
+			
+				
+			<div id="contents">
+				<div id="topcolumns">
+					<section id="normalpage">
+					
+						<section id="left2">
+<h2>[*longtitle*]</h2>
+						<article>
+						[*foto_news2*]
+							[*#content*]
+							
+						</article>
+							
+							<section class="blogpreview2">
+								<!-- Вывод новостей !-->
+							</section>
+							<div id="topcolumns">
+
+</div>
+						</section>
+						
+
+						<section id="sidebar">
+							<article class="testimonials">
+
+
+<blockquote>
+<p>
+[!FormLister?
+&model=`Pathologic\EvolutionCMS\MODxAPI\modUsers`
+&modelPath=`core/vendor/pathologic/modxapi/src/modUsers.php`
+&formid=`login`
+&controller=`Login`
+&loginField=`email`
+&passwordField=`password`
+&checkActivation=`1`
+&saveObject=`loginAllUser`
+&rules=`{
+  "email":{
+            "required":"Обязательно введите email"
+            }
+    ,
+    "password":{
+            "required":"Обязательно введите пароль",
+            "minLength":{
+                    "params":6,
+                    "message":"В пароле должно быть больше 6 символов"
+            }
+    }
+}`
+&prepare=`getLoginName`
+&formTpl= `@CODE:
+<div class="register">
+        <form method="post">
+                <input type="hidden" name="formid" value="login">
+                <div class="form-group[+email.errorClass+][+email.requiredClass+]">
+                        <label for="email"><i class="icon-gmail"></i></label>
+                                <input type="text" class="form-control" id="email" placeholder="Email" name="email" value="[+email.value+]">
+                                [+email.error+]
+                </div>
+                <div class="form-group[+password.errorClass+][+password.requiredClass+]">
+                        <label for="password"><i class="icon-cog"></i></label>
+                        <input type="password" class="form-control" id="password" placeholder="Пароль" name="password" value="">
+                        [+password.error+]
+                </div>
+                [+form.messages+]
+                <div class="form-group">
+                        <button type="submit" class="btn btn-primary"><i class="icon-user"></i> Войти</button>
+                </div>
+			<div><a href="[~5~]">забыли пароль</a></div>
+			
+	</div>
+        </form>
+	
+</div>
+`
+&messagesOuterTpl=`@CODE:<div class="alert alert-danger" role="alert">[+messages+]</div>
+`
+&successTpl=`@CODE:
+<div>Поздравляем успешной авторизацией, [+fullname.value+]!<br>
+{{userPanel}}</div>
+`
+&skipTpl=`@CODE:
+	<div>{{userPanel}}</div>`
+&errorTpl=`@CODE:<div class="alert alert-danger">[+message+]</div>`
+&requiredClass=` has-error`
+&errorClass=` has-error`
+&requiredClass=` has-error`
+
+!]
+	
+</p>
+</blockquote>
+
+</article>
+<section id="left3">
+
+<article class="postpreview">
+{{Sponsor2}}
+</article>
+</section> 
+						</section>
+
+						<div class="clear"></div>
+					</section>
+
+					<div class="clear"></div>
+
+				</div>
+
+				
+			</di>
+		</section>
+	</div>
+	<footer id="pagefooter">
+		<div id="credits">
+			<p>
+				{{siteInfo}}
+				
+			</p>
+		</div>
+	</footer>
+</section>
+</body>
+</html>
