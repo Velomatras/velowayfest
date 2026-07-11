@@ -17,6 +17,7 @@
 		DD_belatedPNG.fix('*');
 	</script>
 	<![endif]-->
+        
 	<script src="{{$_SERVER['REQUEST_SCHEME']}}://{{$_SERVER['SERVER_NAME']}}/assets/templates/veloway/js/jquery-1.4.min.js" type="text/javascript"></script>
 	<script src="{{$_SERVER['REQUEST_SCHEME']}}://{{$_SERVER['SERVER_NAME']}}/assets/templates/veloway/js/loopedslider.js" type="text/javascript"></script>
 	
