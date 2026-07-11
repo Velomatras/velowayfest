@@ -3,5 +3,5 @@
 <link href="{{$_SERVER['REQUEST_SCHEME']}}://{{$_SERVER['SERVER_NAME']}}/assets/templates/veloway/css/style7.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" href="/manager/media/style/common/bootstrap/css/bootstrap.min.css">
 
-<!-- стили -->
+<!-- стили тест-->
 
