@@ -1,5 +1,5 @@
 @extends('base')
-
+<!--главный шаблон-->
 @section('lk')
 @stack('openMenu')
 {!!$lk!!}
